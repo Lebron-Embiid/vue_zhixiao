@@ -62,7 +62,7 @@ a{
 			width: 300px;
 			height: 40px;
 			border-radius: 4px;
-			padding: 0 5px;
+			padding: 0 15px;
 			box-sizing: border-box;
 			font-size: 12px;
 			outline: none;
@@ -78,7 +78,7 @@ a{
 			width: 300px;
 			height: 80px;
 			outline: none;
-			padding: 5px;
+			padding: 10px;
 			border-radius: 4px;
 			box-sizing: border-box;
 			border: 1px solid #ccc;
@@ -112,4 +112,90 @@ a{
 		}
 	}
 }
+
+// 信件内导航样式
+.nav_inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	ul{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		background: url('./assets/images/box_bg.gif') left top repeat-x;
+		li{
+			display: block;
+			border-right: 1px solid #d9e6f4;
+			padding: 0px 20px;
+			text-align: center;
+			height: 32px;
+			line-height: 32px;
+			font-size: 12px;
+			color: #3b73ac;
+			cursor: pointer;
+			&.active{
+				color: #1C395B;
+				font-weight: bold;
+				background: url('./assets/images/tagstitle_a_bg.gif') repeat-x left top;
+				background-size: 100% 100%;
+			}
+		}
+	}
+}
+
+// 信件搜索样式
+.right_search{
+	font-size: 12px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 30px;
+	.ipt_txt{
+		display: inline-block;
+		width: 120px;
+		height: 25px;
+		border-radius: 4px;
+		padding: 0 5px;
+		margin: 0 10px;
+		box-sizing: border-box;
+		font-size: 12px;
+		outline: none;
+		transition: all .5s ease;
+		border: 1px solid #ccc;
+		&:focus{
+			border-color: #66afe9;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+		}
+	}
+	.el-date-editor{
+		width: 300px;
+		height: 25px;
+		display: flex;
+		align-items: center;
+		margin: 0 10px;
+		.el-range-separator{
+			height: auto;
+		}
+	}
+	.el-input__icon{
+		height: auto;
+	}
+	.el-button{
+		width: 80px;
+		height: 25px;
+		line-height: 25px;
+		padding: 0;
+	}
+}
+// 用户列表样式
+.userList{
+		padding: 30px;
+		box-sizing: border-box;
+		p{
+			text-align: right;
+			margin: 15px 0 0;
+			font-size: 14px;
+			color: #999;
+		}
+	}
 </style>

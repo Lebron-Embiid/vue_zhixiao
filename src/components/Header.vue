@@ -182,33 +182,33 @@ export default{
 						},
 						{
 							name: '内部信件',
-							path: '/',
+							path: '/letter',
 							twoArr: [
 								{
 									name: '信件列表',
-									path: '/'
+									path: '/letter/letterList'
 								},
 								{
 									name: '发送信件',
-									path: '/'
+									path: '/letter/sendLetter'
 								}
 							]
 						},
 						{
 							name: '数据维护',
-							path: '/',
+							path: '/dataSafe',
 							twoArr: [
 								{
 									name: '备份数据',
-									path: '/'
+									path: '/dataSafe/backupData'
 								},
 								{
 									name: '恢复数据',
-									path: '/'
+									path: '/dataSafe/restoreData'
 								},
 								{
 									name: '清空数据',
-									path: '/'
+									path: '/dataSafe/clearData'
 								}
 							]
 						}
@@ -216,43 +216,43 @@ export default{
 				},
 				{
 					title: '后台用户',
-					path: '/',
+					path: '/user',
 					oneArr: [
 						{
 							name: '用户管理',
-							path: '/',
+							path: '/user',
 							twoArr: [
 								{
 									name: '用户列表',
-									path: '/'
+									path: '/user/userList'
 								},
 								{
 									name: '添加用户',
-									path: '/'
+									path: '/user/addUser'
 								}
 							]
 						},
 						{
 							name: '用户角色',
-							path: '/',
+							path: '/roles',
 							twoArr: [
 								{
 									name: '角色列表',
-									path: '/'
+									path: '/roles/rolesList'
 								},
 								{
 									name: '添加角色',
-									path: '/'
+									path: '/roles/addRoles'
 								}
 							]
 						},
 						{
 							name: '修改密码',
-							path: '/',
+							path: '/user/changePassword',
 							twoArr: [
 								{
 									name: '修改密码',
-									path: '/'
+									path: '/user/changePassword'
 								}
 							]
 						}
@@ -638,7 +638,7 @@ export default{
 		.nav-list{
 			width: 75%;
 			height: 80px;
-			padding-left: 25px;
+			padding-left: 20px;
 			box-sizing: border-box;
 			display: flex;
 			align-items: flex-end;
@@ -973,36 +973,10 @@ export default{
 				overflow-y: auto;
 				background: #fff;
 				border: 1px solid #C7CED4;
-				padding: 10px;
+				// padding: 10px;
 				box-sizing: border-box;
-				ul{
-					display: flex;
-					justify-content: flex-start;
-					align-items: center;
-					background: url('../assets/images/box_bg.gif') left top repeat-x;
-					li{
-						a{
-							display: block;
-							border-right: 1px solid #d9e6f4;
-							padding: 0px 20px;
-							text-align: center;
-							height: 32px;
-							line-height: 32px;
-							font-size: 12px;
-							color: #3b73ac;
-						}
-						&.active{
-							a{
-								color: #1C395B;
-								font-weight: bold;
-								background: url('../assets/images/tagstitle_a_bg.gif') repeat-x left top;
-								background-size: 100% 100%;
-							}
-						}
-					}
-				}
 				.content_template{
-					padding: 5px 0 0;
+					padding: 0;
 					box-sizing: border-box;
 				}
 			}

@@ -5,7 +5,7 @@ import Index from '@/views/Index.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import About from '@/views/About.vue'
-
+// 系统设置
 import Settings from '@/views/system/settings.vue'
 import UserSettings from '@/views/system/userSettings.vue'
 import NetworkSettings from '@/views/system/networkSettings.vue'
@@ -15,7 +15,7 @@ import EmailSettings from '@/views/system/emailSettings.vue'
 import SmsConfig from '@/views/system/smsConfig.vue'
 import UserAgreement from '@/views/system/userAgreement.vue'
 import CustomForm from '@/views/system/customForm.vue'
-
+// 系统信息
 import CodePoster from '@/views/systemInfo/codePoster.vue'
 import PcBackground from '@/views/systemInfo/pcBackground.vue'
 import MobileBackground from '@/views/systemInfo/mobileBackground.vue'
@@ -24,6 +24,20 @@ import LoginLogo from '@/views/systemInfo/loginLogo.vue'
 import MobileBanner from '@/views/systemInfo/mobileBanner.vue'
 import PcBanner from '@/views/systemInfo/pcBanner.vue'
 import PublicCode from '@/views/systemInfo/publicCode.vue'
+// 内部信件
+import LetterList from '@/views/letter/letterList.vue'
+import SendLetter from '@/views/letter/sendLetter.vue'
+// 数据维护
+import BackupData from '@/views/dataSafe/backupData.vue'
+import RestoreData from '@/views/dataSafe/restoreData.vue'
+import ClearData from '@/views/dataSafe/clearData.vue'
+
+// 后台用户
+import UserList from '@/views/adminUser/userList.vue'
+import AddUser from '@/views/adminUser/addUser.vue'
+import RolesList from '@/views/adminUser/rolesList.vue'
+import AddRoles from '@/views/adminUser/addRoles.vue'
+import ChangePassword from '@/views/adminUser/changePassword.vue'
 
 
 Vue.use(VueRouter)
@@ -132,6 +146,94 @@ const routes = [
 		]
 	},
 	{
+		path: '/letter',
+		name: 'letter',
+		redirect: '/letterList',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: LetterList
+			},
+			{
+			  path: 'letterList',
+			  component: LetterList
+			},
+			{
+			  path: 'sendLetter',
+			  component: SendLetter
+			}
+		]
+	},
+	{
+		path: '/dataSafe',
+		name: 'dataSafe',
+		redirect: '/backupData',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: BackupData
+			},
+			{
+			  path: 'backupData',
+			  component: BackupData
+			},
+			{
+			  path: 'restoreData',
+			  component: RestoreData
+			},
+			{
+			  path: 'clearData',
+			  component: ClearData
+			}
+		]
+	},
+	{
+		path: '/user',
+		name: 'user',
+		redirect: '/userList',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: UserList
+			},
+			{
+			  path: 'userList',
+			  component: UserList
+			},
+			{
+			  path: 'addUser',
+			  component: AddUser
+			},
+			{
+			  path: 'changePassword',
+			  component: ChangePassword
+			}
+		]
+	},
+	{
+		path: '/roles',
+		name: 'roles',
+		redirect: '/rolesList',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: RolesList
+			},
+			{
+			  path: 'rolesList',
+			  component: RolesList
+			},
+			{
+			  path: 'addRoles',
+			  component: AddRoles
+			}
+		]
+	},
+	{
 		path: '/about',
 		name: 'about',
 		component: About
@@ -157,8 +259,8 @@ const routes = [
     //   component: () => import('./views/404.vue')
     // }
 	{
-	      path: "*",
-	      redirect: "/"
+		path: "*",
+		redirect: "/"
 	}
 ]
 

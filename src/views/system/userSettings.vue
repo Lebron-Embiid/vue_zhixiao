@@ -59,12 +59,12 @@
 			</div>
 			<div class="form_item">
 				<span class="left_txt">平台收款账号</span>
-				<textarea name="" id="" v-model="form.account" cols="30" rows="10"></textarea>
+				<textarea name="" v-model="form.account" cols="30" rows="10"></textarea>
 				<p class="right_till"><img src="../../assets/images/cuo2.gif" alt="">会员支付订单时显示。</p>
 			</div>
 			<div class="form_item">
 				<span class="left_txt">提现银行</span>
-				<textarea name="" id="" v-model="form.bank" cols="30" rows="10"></textarea>
+				<textarea name="" v-model="form.bank" cols="30" rows="10"></textarea>
 				<p class="right_till"><img src="../../assets/images/cuo2.gif" alt="">提现支持银行列表，每个以","隔开。</p>
 			</div>
 			<div class="form_item">
