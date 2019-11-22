@@ -39,6 +39,18 @@ import RolesList from '@/views/adminUser/rolesList.vue'
 import AddRoles from '@/views/adminUser/addRoles.vue'
 import ChangePassword from '@/views/adminUser/changePassword.vue'
 
+// 会员管理
+import MemberList from '@/views/member/memberList.vue'
+import AddMember from '@/views/member/addMember.vue'
+import ResetPassword from '@/views/member/resetPassword.vue'
+import LevelList from '@/views/member/levelList.vue'
+import AddLevel from '@/views/member/addLevel.vue'
+import Agent from '@/views/member/agent.vue'
+import AddAgent from '@/views/member/addAgent.vue'
+import ReportCenter from '@/views/member/reportCenter.vue'
+import AddReportCenter from '@/views/member/addReportCenter.vue'
+import Dividend from '@/views/member/dividend.vue'
+
 
 Vue.use(VueRouter)
 
@@ -230,6 +242,94 @@ const routes = [
 			{
 			  path: 'addRoles',
 			  component: AddRoles
+			}
+		]
+	},
+	{
+		path: '/member',
+		name: 'member',
+		redirect: '/memberList',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: MemberList
+			},
+			{
+			  path: 'memberList',
+			  component: MemberList
+			},
+			{
+			  path: 'addMember',
+			  component: AddMember
+			},
+			{
+			  path: 'resetPassword',
+			  component: ResetPassword
+			},
+			{
+			  path: 'dividend',
+			  component: Dividend
+			}
+		]
+	},
+	{
+		path: '/level',
+		name: 'level',
+		redirect: '/levelList',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: LevelList
+			},
+			{
+			  path: 'levelList',
+			  component: LevelList
+			},
+			{
+			  path: 'addLevel',
+			  component: AddLevel
+			}
+		]
+	},
+	{
+		path: '/region',
+		name: 'region',
+		redirect: '/agent',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: Agent
+			},
+			{
+			  path: 'agent',
+			  component: Agent
+			},
+			{
+			  path: 'addAgent',
+			  component: AddAgent
+			}
+		]
+	},
+	{
+		path: '/report',
+		name: 'report',
+		redirect: '/reportCenter',
+		component: Index,
+		children: [
+			{
+			  path: '/',
+			  component: ReportCenter
+			},
+			{
+			  path: 'reportCenter',
+			  component: ReportCenter
+			},
+			{
+			  path: 'addReportCenter',
+			  component: AddReportCenter
 			}
 		]
 	},

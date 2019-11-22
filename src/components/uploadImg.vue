@@ -1,5 +1,5 @@
 <template>
-	<div class="uploadImg">
+	<div class="uploadImg pt30">
 		<!-- :on-preview="handlePictureCardPreview" -->
 		<el-upload
 			action="https://jsonplaceholder.typicode.com/posts/"

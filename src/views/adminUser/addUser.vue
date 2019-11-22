@@ -1,5 +1,5 @@
 <template>
-	<div class="addUser">
+	<div class="addUser pt30">
 		<el-form ref="form" class="form_box" :model="form">
 			<div class="form_item">
 				<span class="left_txt">用户账号</span>

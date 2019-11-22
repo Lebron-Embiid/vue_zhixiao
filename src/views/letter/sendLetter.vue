@@ -1,5 +1,5 @@
 <template>
-	<div class="sendLetter">
+	<div class="sendLetter pt30">
 		<el-form ref="form" class="form_box" :model="form">
 			<div class="form_item">
 				<span class="left_txt">信件主题</span>

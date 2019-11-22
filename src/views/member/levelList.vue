@@ -1,5 +1,5 @@
 <template>
-	<div class="userList rolesList">
+	<div class="userList levelList">
 		<el-table
 			:data="tableData"
 			stripe
@@ -9,22 +9,21 @@
 			  prop="id">
 			</el-table-column>
 			<el-table-column
-			  label="角色名称"
-			  prop="user_roles">
+			  label="级别名称"
+			  prop="level_name">
+			</el-table-column>
+			<el-table-column
+			  label="排序"
+			  prop="sort">
 			</el-table-column>
 			<el-table-column label="操作">
 			  <template slot-scope="scope">
 				<el-button
 				  size="mini"
 				  @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
-				<el-button
-				  size="mini"
-				  type="danger"
-				  @click="handleDelete(scope.$index, scope.row)">删除</el-button>
 			  </template>
 			</el-table-column>
 		</el-table>
-		<p>0条记录 / 1页</p>
 	</div>
 </template>
 
@@ -33,18 +32,22 @@
 		data(){
 			return{
 				tableData: [{
-				  id: '1',
-				  user_name: 'admin',
-				  user_roles: '超级管理员',
-				  login_num: '3744次'
+				  id: 1,
+				  level_name: '游客',
+				  sort: 5
+				},{
+				  id: 2,
+				  level_name: 'VIP会员',
+				  sort: 11
+				},{
+				  id: 3,
+				  level_name: '联创',
+				  sort: 22
 				}]
 			}
 		},
 		methods:{
 			handleEdit(index, row) {
-				console.log(index, row);
-			},
-			handleDelete(index, row) {
 				console.log(index, row);
 			}
 		}

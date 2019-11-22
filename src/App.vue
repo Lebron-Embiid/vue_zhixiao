@@ -37,6 +37,10 @@ a{
 	text-decoration: none;
 }
 
+// .pt30{
+// 	padding: 30px 0 20px;
+// 	box-sizing: border-box;
+// }
 .form_box{
 	// padding-left: 50px;
 	.form_item{
@@ -56,6 +60,11 @@ a{
 			width: 180px;
 			text-align: right;
 			margin-right: 20px;
+		}
+		.div_txt{
+			font-weight: normal;
+			font-size: 16px;
+			color: #666;
 		}
 		.ipt_txt{
 			display: block;
@@ -115,9 +124,9 @@ a{
 
 // 信件内导航样式
 .nav_inner{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	// display: flex;
+	// justify-content: space-between;
+	// align-items: center;
 	ul{
 		display: flex;
 		justify-content: flex-start;
@@ -150,10 +159,11 @@ a{
 	justify-content: flex-end;
 	align-items: center;
 	padding-right: 30px;
+	margin-top: 20px;
 	.ipt_txt{
 		display: inline-block;
 		width: 120px;
-		height: 25px;
+		height: 30px;
 		border-radius: 4px;
 		padding: 0 5px;
 		margin: 0 10px;
@@ -169,7 +179,7 @@ a{
 	}
 	.el-date-editor{
 		width: 300px;
-		height: 25px;
+		height: 30px;
 		display: flex;
 		align-items: center;
 		margin: 0 10px;
@@ -182,9 +192,10 @@ a{
 	}
 	.el-button{
 		width: 80px;
-		height: 25px;
-		line-height: 25px;
+		height: 30px;
+		line-height: 30px;
 		padding: 0;
+		font-size: 12px;
 	}
 }
 // 用户列表样式

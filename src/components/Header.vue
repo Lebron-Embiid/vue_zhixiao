@@ -260,75 +260,75 @@ export default{
 				},
 				{
 					title: '会员管理',
-					path: '/',
+					path: '/member',
 					oneArr: [
 						{
 							name: '会员管理',
-							path: '/',
+							path: '/member',
 							twoArr: [
 								{
 									name: '会员列表',
-									path: '/'
+									path: '/member/memberList'
 								},
 								{
 									name: '添加会员',
-									path: '/'
+									path: ''
 								},
 								{
 									name: '重置密码',
-									path: '/'
+									path: '/member/resetPassword'
 								}
 							]
 						},
 						{
 							name: '会员级别',
-							path: '/',
+							path: '/level',
 							twoArr: [
 								{
 									name: '级别列表',
-									path: '/'
+									path: '/level/levelList'
 								},
 								{
 									name: '添加级别',
-									path: '/'
+									path: '/level/addLevel'
 								}
 							]
 						},
 						{
 							name: '区域代理',
-							path: '/',
+							path: '/region',
 							twoArr: [
 								{
 									name: '代理',
-									path: '/'
+									path: '/region/agent'
 								},
 								{
 									name: '添加代理',
-									path: '/'
+									path: '/region/addAgent'
 								}
 							]
 						},
 						{
 							name: '报单中心',
-							path: '/',
+							path: '/report',
 							twoArr: [
 								{
 									name: '报单中心',
-									path: '/'
+									path: '/report/reportCenter'
 								},
 								{
 									name: '添加报单中心',
-									path: '/'
+									path: '/report/addReportCenter'
 								}
 							]
 						},
 						{
 							name: '股东分红',
-							path: '/',
+							path: '/member/dividend',
 							twoArr: [
 								{
 									name: '股东分红',
-									path: '/'
+									path: '/member/dividend'
 								}
 							]
 						}
@@ -603,16 +603,20 @@ export default{
 	  	this.curIndex = key;
 		this.leftCur = 0;
 		this.rightCur = 0;
-	  	console.log(key);
+	  	// console.log(key);
 	  },
 	  clickLeftNav(idx){
 	  	this.leftCur = idx;
 		this.rightCur = 0;
 	  },
 	  clickRightNav(idx){
+		// console.log(this.curIndex,this.leftCur,idx);
 	  	this.rightCur = idx;
-		if(this.leftCur == 1 && idx == 8){
+		if(this.curIndex == 0 && this.leftCur == 1 && idx == 8){
 			this.$message('更新缓存成功');
+		}
+		if(this.curIndex == 2 && this.leftCur == 0 && idx == 1){
+			this.$message('请使用会员账号进行注册');
 		}
 	  },
 	  logout(){
