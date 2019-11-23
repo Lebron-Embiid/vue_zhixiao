@@ -59,11 +59,11 @@
 					<div class="add_box">
 						<span>奖励要求</span>
 						<ul>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
+							<li v-for="(item,index) in pushList" :key="index">
+								推荐<input type="text">人可拿<input type="text" v-model="item.push_val">层 <a href="javascript:void(0);" @click="delPush(index)">删除</a>
+							</li>
 						</ul>
-						<el-button type="primary" size="mini" @click="add">添加一个要求</el-button>
+						<el-button type="primary" size="mini" @click="addPush">添加一个要求</el-button>
 					</div>
 				</div>
 			</div>
@@ -99,12 +99,12 @@
 					<div class="add_box">
 						<span>奖励要求</span>
 						<ul>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
-							<li>推荐<input type="text">人可拿<input type="text">层 <a href="">删除</a></li>
+							<li v-for="(item,index) in recList" :key="index">
+								推荐<input type="text">人可拿<input type="text" v-model="item.push_val">层 <a href="javascript:void(0);" @click="delRecommend(index)">删除</a>
+							</li>
 						</ul>
 						<!-- <button>添加一个要求</button> -->
-						<el-button type="primary" size="mini" @click="add">添加一个要求</el-button>
+						<el-button type="primary" size="mini" @click="addRecommend">添加一个要求</el-button>
 					</div>
 				</div>
 			</div>
@@ -242,7 +242,9 @@
 						list: ['基本信息','修改密码','邮箱验证'],
 						select: []
 					}
-				]
+				],
+				pushList: [],
+				recList: []
 			}
 		},
 		methods: {
@@ -253,8 +255,17 @@
 			  console.log(value);
 			  console.log(this.checkList);
 		  },
-		  add(){
-			  
+		  addPush(idx){
+			  this.pushList.push({push_val:''});
+		  },
+		  delPush(idx){
+			  this.pushList.splice(idx,1);
+		  },
+		  addRecommend(){
+			  this.recList.push({push_val:''});
+		  },
+		  delRecommend(idx){
+			  this.recList.splice(idx,1);
 		  }
 		}
 	}

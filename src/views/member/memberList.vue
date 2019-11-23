@@ -24,7 +24,7 @@
 			<table>
 				<th>
 					<td width="200">会员信息</td>
-					<td width="150">市场信息</td>
+					<td width="200">市场信息</td>
 					<td width="220">公排信息</td>
 					<td width="180">账户资金</td>
 					<td width="300">联系信息</td>
@@ -39,7 +39,7 @@
 						<p>渠道商：<img src="../../assets/images/no.gif" alt=""></p>
 						<a href="" class="toClick">点击登录</a>
 					</td>
-					<td width="150">
+					<td width="200">
 						<p>推荐人：{{item.referrer}}</p>
 						<p>接点人：{{item.contact}}</p>
 						<p>报单中心：{{item.report}}</p>

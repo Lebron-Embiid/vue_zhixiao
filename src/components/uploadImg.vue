@@ -8,7 +8,6 @@
 			:limit="imgLimit"
 			:file-list="productImgs"
 			:multiple="isMultiple"
-			
 			:on-remove="handleRemove"
 			:on-success="handleAvatarSuccess"
 			:before-upload="beforeAvatarUpload"
@@ -27,6 +26,7 @@
 		name: "uploadImg",
 		data(){
 			return{
+				imageUrl: '',
 				dialogImageUrl: '',
 				dialogVisible: false,
 				isMultiple: true,
@@ -66,6 +66,7 @@
 				console.log(res);
 				console.log(file);
 				this.imageUrl = URL.createObjectURL(file.raw);
+				this.$emit('backImageUrl',this.imageUrl);
 			},
 			handleExceed(files, fileList) {//图片上传超过数量限制
 				this.$message.error('上传图片不能超过6张!');

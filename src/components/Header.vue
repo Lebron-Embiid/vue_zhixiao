@@ -336,65 +336,65 @@ export default{
 				},
 				{
 					title: '财务统计',
-					path: '/',
+					path: '/finance',
 					oneArr: [
 						{
 							name: '资金明细',
-							path: '/',
+							path: '/finance/FundDetails',
 							twoArr: [
 								{
 									name: '资金流水',
-									path: '/'
+									path: '/finance/FundDetails'
 								}
 							]
 						},
 						{
 							name: '提现记录',
-							path: '/',
+							path: '/finance/withdrawRecord',
 							twoArr: [
 								{
 									name: '提现记录',
-									path: '/'
+									path: '/finance/withdrawRecord'
 								}
 							]
 						},
 						{
 							name: '升级申请',
-							path: '/',
+							path: '/finance/updateApplication',
 							twoArr: [
 								{
 									name: '升级申请',
-									path: '/'
+									path: '/finance/updateApplication'
 								}
 							]
 						},
 						{
 							name: '业绩排名',
-							path: '/',
+							path: '/finance/performanceRank',
 							twoArr: [
 								{
 									name: '排名列表',
-									path: '/'
+									path: '/finance/performanceRank'
 								}
 							]
 						},
 						{
 							name: '充值记录',
-							path: '/',
+							path: '/finance/rechargeRecord',
 							twoArr: [
 								{
 									name: '充值记录',
-									path: '/'
+									path: '/finance/rechargeRecord'
 								}
 							]
 						},
 						{
 							name: '账单汇总',
-							path: '/',
+							path: '/finance/summaryBill',
 							twoArr: [
 								{
 									name: '账单汇总',
-									path: '/'
+									path: '/finance/summaryBill'
 								}
 							]
 						}
@@ -402,41 +402,41 @@ export default{
 				},
 				{
 					title: '网站基础',
-					path: '/',
+					path: '/news',
 					oneArr: [
 						{
 							name: '新闻管理',
-							path: '/',
+							path: '/news',
 							twoArr: [
 								{
 									name: '新闻列表',
-									path: '/'
+									path: '/news/newsList'
 								},
 								{
 									name: '添加新闻',
-									path: '/'
+									path: '/news/addNews'
 								},
 								{
 									name: '新闻分类',
-									path: '/'
+									path: '/news/newsClass'
 								}
 							]
 						},
 						{
 							name: '单页管理',
-							path: '/',
+							path: '/page',
 							twoArr: [
 								{
 									name: '单页列表',
-									path: '/'
+									path: '/page/pageList'
 								},
 								{
 									name: '添加单页',
-									path: '/'
+									path: '/page/addPage'
 								},
 								{
 									name: '单页分类',
-									path: '/'
+									path: '/page/pageClass'
 								}
 							]
 						}
@@ -444,69 +444,69 @@ export default{
 				},
 				{
 					title: '商城管理',
-					path: '/',
+					path: '/shop',
 					oneArr: [
 						{
 							name: '商品管理',
-							path: '/',
+							path: '/shop',
 							twoArr: [
 								{
 									name: '商品列表',
-									path: '/'
+									path: '/shop/goodsList'
 								},
 								{
 									name: '添加商品',
-									path: '/'
+									path: '/shop/addGoods'
 								},
 								{
 									name: '商品分类',
-									path: '/'
+									path: '/shop/goodsClass'
 								},
 								{
 									name: '商城轮播图',
-									path: '/'
+									path: '/shop/shopBanner'
 								}
 							]
 						},
 						{
 							name: '配送方式',
-							path: '/',
+							path: '/delivery',
 							twoArr: [
 								{
 									name: '配送方式',
-									path: '/'
+									path: '/delivery/deliveryType'
 								},
 								{
 									name: '添加配送方式',
-									path: '/'
+									path: '/delivery/addDelivery'
 								}
 							]
 						},
 						{
 							name: '订单管理',
-							path: '/',
+							path: '/order',
 							twoArr: [
 								{
 									name: '订单列表',
-									path: '/'
+									path: '/order/orderList'
 								},
 								{
 									name: '后台创建订单',
-									path: '/'
+									path: '/order/createOrder'
 								},
 								{
 									name: '订单飘窗',
-									path: '/'
+									path: '/order/orderWindow'
 								}
 							]
 						},
 						{
 							name: '评论管理',
-							path: '/',
+							path: '/shop/commentList',
 							twoArr: [
 								{
 									name: '评论列表',
-									path: '/'
+									path: '/shop/commentList'
 								}
 							]
 						}
@@ -514,33 +514,33 @@ export default{
 				},
 				{
 					title: '支付方式',
-					path: '/',
+					path: '/code',
 					oneArr: [
 						{
 							name: '二维码管理',
-							path: '/',
+							path: '/code',
 							twoArr: [
 								{
 									name: '二维码列表',
-									path: '/'
+									path: '/code/codeList'
 								},
 								{
 									name: '添加二维码',
-									path: '/'
+									path: '/code/addCode'
 								}
 							]
 						},
 						{
 							name: '第三方支付',
-							path: '/',
+							path: '/pay',
 							twoArr: [
 								{
 									name: '配置列表',
-									path: '/'
+									path: '/pay/configList'
 								},
 								{
 									name: '添加配置',
-									path: '/'
+									path: '/pay/addConfig'
 								}
 							]
 						}
@@ -548,35 +548,35 @@ export default{
 				},
 				{
 					title: '接口设置',
-					path: '/',
+					path: '/config',
 					oneArr: [
 						{
 							name: '微信支付参数',
-							path: '/',
+							path: '/config',
 							twoArr: [
 								{
 									name: '配置信息',
-									path: '/'
+									path: '/config/wechatPayConfig'
 								}
 							]
 						},
 						{
 							name: '微信端配置',
-							path: '/',
+							path: '/config/wechatConfig',
 							twoArr: [
 								{
 									name: '配置信息',
-									path: '/'
+									path: '/config/wechatConfig'
 								}
 							]
 						},
 						{
 							name: '支付宝支付参数',
-							path: '/',
+							path: '/config/alipayConfig',
 							twoArr: [
 								{
 									name: '配置信息',
-									path: '/'
+									path: '/config/alipayConfig'
 								}
 							]
 						}
@@ -603,15 +603,24 @@ export default{
 	  	this.curIndex = key;
 		this.leftCur = 0;
 		this.rightCur = 0;
+		sessionStorage.setItem('curIndex',this.curIndex);
+		sessionStorage.setItem('leftCur',this.leftCur);
+		sessionStorage.setItem('rightCur',this.rightCur);
 	  	// console.log(key);
 	  },
 	  clickLeftNav(idx){
 	  	this.leftCur = idx;
 		this.rightCur = 0;
+		sessionStorage.setItem('curIndex',this.curIndex);
+		sessionStorage.setItem('leftCur',this.leftCur);
+		sessionStorage.setItem('rightCur',this.rightCur);
 	  },
 	  clickRightNav(idx){
-		// console.log(this.curIndex,this.leftCur,idx);
+		console.log(this.curIndex,this.leftCur,idx);
 	  	this.rightCur = idx;
+		sessionStorage.setItem('curIndex',this.curIndex);
+		sessionStorage.setItem('leftCur',this.leftCur);
+		sessionStorage.setItem('rightCur',this.rightCur);
 		if(this.curIndex == 0 && this.leftCur == 1 && idx == 8){
 			this.$message('更新缓存成功');
 		}
@@ -625,6 +634,16 @@ export default{
 			  this.$router.replace('/login')
 			})
 	  }
+	},
+	mounted() {
+		if (window.performance.navigation.type == 1) {
+			console.log("页面被刷新")
+			this.curIndex =  sessionStorage.getItem('curIndex');
+			this.leftCur =  sessionStorage.getItem('leftCur');
+			this.rightCur =  sessionStorage.getItem('rightCur');			
+		  }else{
+			console.log("首次被加载")
+		  }
 	}
 }
 </script>

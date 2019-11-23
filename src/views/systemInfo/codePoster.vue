@@ -4,7 +4,7 @@
 			<div class="form_item">
 				<span class="left_txt">产品相册</span>
 				<div class="el-upload-box">
-					<upload-img :productImgs="codePicList"></upload-img>
+					<upload-img :productImgs="codePicList" @backImageUrl="getImage"></upload-img>
 				</div>
 				<p class="right_till">不超过200KB (宽：433 高：650)</p>
 			</div>
@@ -33,6 +33,9 @@
 		methods: {
 			onSubmit() {
 				console.log(this.form);
+			},
+			getImage(url){
+				console.log(url);
 			}
 		}
 	}
