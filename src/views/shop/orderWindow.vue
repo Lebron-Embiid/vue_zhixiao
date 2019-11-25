@@ -2,11 +2,6 @@
 	<div class="orderWindow">
 		<el-form ref="form" class="form_box" :model="form">
 			<div class="form_item">
-				<span class="left_txt">消费积分名称</span>
-				<input class="ipt_txt" v-model="form.point_name"/>
-				<p class="right_till"><img src="../../assets/images/cuo2.gif" alt=""></p>
-			</div>
-			<div class="form_item">
 				<span class="left_txt">订单飘窗</span>
 				<el-radio-group v-model="form.window">
 					<el-radio :label="1">开启</el-radio>
@@ -37,7 +32,7 @@
 						<input type="text" placeholder="请输入虚拟会员名" v-model="item.vip_name">
 						<input type="text" placeholder="请输入下单时间" v-model="item.time">
 						<img src="../../assets/images/add.jpg" alt="" v-if="item.add == 0" @click="addVip">
-						<img src="../../assets/images/a2.gif" alt="" v-else>
+						<img src="../../assets/images/a2.gif" alt="" v-else @click="delVip(index)">
 					</li>
 				</ul>
 				<p>0显示"刚刚",小于60显示"X秒",60-3599显示"X分钟",3600以上显示"小时"</p>
@@ -87,6 +82,9 @@
 				 time: '',
 				 add: 1
 			  })
+		  },
+		  delVip(idx){
+			  this.vipList.splice(idx,1)
 		  }
 		}
 	}
@@ -104,6 +102,9 @@
 					align-items: center;
 					margin-right: 20px;
 					margin-bottom: 10px;
+					&:last-child{
+						margin-bottom: 0;
+					}
 					input{
 						width: 150px;
 						height: 25px;

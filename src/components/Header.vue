@@ -38,6 +38,23 @@
 		</div>	
 		<div class="main-menu">
 			<div class="left-menu-box">
+				<!-- <el-menu
+				  class="el-menu-vertical-demo"
+				  background-color="#545c64"
+				  text-color="#fff"
+				  :router="isRouter"
+				  active-text-color="#ffd04b">
+				  <el-submenu :index="item.path" @click="clickLeftNav(index)" v-for="(item,index) in navs[curIndex].oneArr" :key="index">
+					<template slot="title">
+						<router-link :to="item.path">{{item.name}}</router-link>
+					</template>
+					<el-menu-item-group>
+					  <el-menu-item v-for="(items,idx) in navs[curIndex].oneArr[leftCur].twoArr" @click="clickRightNav(idx)" :key="idx" :index="items.path">
+						<router-link :to="items.path">{{items.name}}</router-link>
+					  </el-menu-item>
+					</el-menu-item-group>
+				  </el-submenu>
+				</el-menu> -->
 				<div class="one_nav">
 					<!-- <div class="left-menu-title">{{navs[curIndex].title}}</div> -->
 					<div class="left-menu-item" :class="[leftCur == index?'active':'']" @click="clickLeftNav(index)" v-for="(item,index) in navs[curIndex].oneArr" :key="index">
@@ -85,6 +102,7 @@ export default{
 	name: 'HeaderNav',
 	data(){
 		return{
+			isRouter: true,
 			collapse: false, //菜单栏是否闭合
 			fullscreen: false,
 			showlrc:true,
@@ -641,9 +659,14 @@ export default{
 			this.curIndex =  sessionStorage.getItem('curIndex');
 			this.leftCur =  sessionStorage.getItem('leftCur');
 			this.rightCur =  sessionStorage.getItem('rightCur');			
-		  }else{
+		}else{
 			console.log("首次被加载")
-		  }
+		}
+		if(this.$route.query.id == 0){
+			this.curIndex =  0;
+			this.leftCur =  0;
+			this.rightCur = 0;
+		}
 	}
 }
 </script>
@@ -871,6 +894,13 @@ export default{
 			display: flex;
 			justify-content: space-between;
 			align-items: stretch;
+			.el-menu-vertical-demo{
+				overflow-y: scroll;
+				width: 100%;
+				a{
+					color: #ccc;
+				}
+			}
 			.one_nav{
 				width: 110px;
 				height: 100%;

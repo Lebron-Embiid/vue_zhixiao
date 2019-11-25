@@ -24,12 +24,14 @@
 			</div>
 			<div class="form_item">
 				<span class="left_txt">详细内容</span>
-				<vue-ueditor-wrap 
-					v-model="form.content" 
-					:config="editorConfig" 
-					>
-				</vue-ueditor-wrap>
-				<p class="right_till"><img src="../../assets/images/cuo2.gif" alt="">单页的详细内容</p>
+				<div class="right_open">
+					<vue-ueditor-wrap
+						v-model="form.content" 
+						:config="editorConfig" 
+						>
+					</vue-ueditor-wrap>
+					<!-- <p class="right_till"><img src="../../assets/images/cuo2.gif" alt="">单页的详细内容</p> -->
+				</div>
 			</div>
 			
 			<div class="form_item noborder">
@@ -92,5 +94,14 @@
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
+	.right_open{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		.right_till{
+			margin-top: 10px;
+		}
+	}
 </style>

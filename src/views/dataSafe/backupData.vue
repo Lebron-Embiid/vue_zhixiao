@@ -14,7 +14,7 @@
 		<el-table-column
 		  prop="name"
 		  label="表名"
-		  width="400">
+		  width="300">
 		</el-table-column>
 		<el-table-column
 		  prop="type"
@@ -23,7 +23,8 @@
 		</el-table-column>
 		<el-table-column
 		  prop="coding"
-		  label="编码">
+		  label="编码"
+		  width="200">
 		</el-table-column>
 		<el-table-column
 		  prop="num"

@@ -5,14 +5,14 @@
 				<th>
 					<td width="300">分类编码</td>
 					<td width="350">分类名称</td>
-					<td width="350">系统公告(0为不是、1为是，登录会员可查看)</td>
+					<td width="500">系统公告(0为不是、1为是，登录会员可查看)</td>
 					<td width="350">分类排序</td>
 					<td width="350">分类操作</td>
 				</th>
 				<tr v-for="(item,index) in tableData" :key="index">
 					<td width="300">{{item.id}}</td>
 					<td width="350"><input type="text" v-model="item.name"></td>
-					<td width="350"><input type="text" v-model="item.type"></td>
+					<td width="500"><input type="text" v-model="item.type"></td>
 					<td width="350"><input type="text" v-model="item.rank"></td>
 					<td width="350">
 						<el-button v-if="item.btn == 1" size="mini" type="danger" @click="handleDelete(index)">删除</el-button>

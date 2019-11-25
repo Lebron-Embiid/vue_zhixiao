@@ -91,13 +91,7 @@ import WechatPayConfig from '@/views/config/wechatPayConfig.vue'
 import WechatConfig from '@/views/config/wechatConfig.vue'
 import AlipayConfig from '@/views/config/alipayConfig.vue'
 
-
 Vue.use(VueRouter)
-
-//引入recom组件！
-const recom = {
-	template: `<router-view></router-view>`
-}
 
 const routes = [
 	{

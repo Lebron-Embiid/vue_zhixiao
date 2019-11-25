@@ -64,7 +64,8 @@
 			</el-table-column>
 			<el-table-column
 			  label="时间"
-			  prop="time">
+			  prop="time"
+			  width="200">
 			</el-table-column>
 		  </el-table>
 		  <p>0条记录 / 1页</p>

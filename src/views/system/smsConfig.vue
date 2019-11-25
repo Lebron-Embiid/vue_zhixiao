@@ -53,5 +53,8 @@
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
+	.form_box .form_item .right_till{
+		max-width: 50%;
+	}
 </style>

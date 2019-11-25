@@ -38,8 +38,7 @@
 			</el-table-column>
 			<el-table-column
 			  label="充值金额"
-			  prop="withdraw"
-			  width="400">
+			  prop="withdraw">
 			</el-table-column>
 			<el-table-column
 			  label="申请会员"
@@ -53,7 +52,8 @@
 			  label="申请时间"
 			  prop="time">
 			</el-table-column>
-			<el-table-column label="操作">
+			<el-table-column label="操作"
+			  width="180">
 			  <template slot-scope="scope">
 				<el-button
 				  size="mini"

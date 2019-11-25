@@ -46,7 +46,7 @@
 			  label="申请时间"
 			  prop="time">
 			</el-table-column>
-			<el-table-column label="中心操作">
+			<el-table-column label="中心操作" width="180">
 			  <template slot-scope="scope">
 				<el-button
 				  size="mini"
@@ -67,7 +67,9 @@
 		data(){
 			return{
 				region_select: 1,
-				tableData: [],
+				tableData: [
+					
+				],
 				date: '',
 			}
 		},

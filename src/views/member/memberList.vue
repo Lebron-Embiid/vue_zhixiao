@@ -29,7 +29,7 @@
 					<td width="180">账户资金</td>
 					<td width="300">联系信息</td>
 					<td width="300">开通情况</td>
-					<td width="300">操作</td>
+					<td width="350">操作</td>
 				</th>
 				<tr v-for="(item,index) in tableData" :key="index">
 					<td width="200">
@@ -66,7 +66,7 @@
 						<p>最后登录：{{item.end}}</p>
 						<p>可否登录：<img src="../../assets/images/yes.gif" alt=""></p>
 					</td>
-					<td width="300">
+					<td width="350">
 						<el-button
 						  size="mini"
 						  type="text"
