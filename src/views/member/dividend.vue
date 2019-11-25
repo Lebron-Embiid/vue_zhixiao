@@ -15,6 +15,10 @@
 					选择"手动输入"则按填写的金额分红；选"订单金额"则按上次分红时间到现在的完成订单金额分红
 				</div>
 			</div>
+			<div class="form_item" v-if="form.style == 1">
+				<span class="left_txt">分红总金额</span>
+				<input type="text" class="ipt_txt" v-model="form.price" style="margin-right: 10px;"> 元
+			</div>
 			<div class="form_item">
 				<span class="left_txt">全体代理平分</span>
 				<div>
@@ -41,7 +45,8 @@
 				form:{
 					time: '',
 					style: 1,
-					out: 1
+					out: 1,
+					price: ''
 				}
 			}
 		},
