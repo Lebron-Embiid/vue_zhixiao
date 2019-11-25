@@ -48,7 +48,7 @@ export default {
 		// 	this.$message.error('请输入正确的验证码！');
 		// 	return;
 		// }
-		this.$store.dispatch('setAuthenticated');
+		// this.$store.dispatch('setAuthenticated');
 		this.$router.push({
           path: '/index',
           query: {
