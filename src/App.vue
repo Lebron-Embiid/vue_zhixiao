@@ -1,27 +1,18 @@
 <template>
   <div id="app">
-		<header-nav></header-nav>
-		<!-- <router-view/> -->
+		<router-view/>
   </div>
 </template>
 
 <script>
-import HeaderNav from './components/Header.vue'
 export default{
 	data(){
 		return{
 			
 		}
 	},
-	components:{
-		HeaderNav
-	},
 	mounted() {
-		if (window.performance.navigation.type == 1) {
-			console.log("页面被刷新")
-		  }else{
-			console.log("首次被加载")
-		  }
+		
 	}
 }
 </script>
