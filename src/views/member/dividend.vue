@@ -44,7 +44,7 @@
 			return{
 				form:{
 					time: '',
-					style: 1,
+					style: 2,
 					out: 1,
 					price: ''
 				}

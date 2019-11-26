@@ -148,6 +148,33 @@
 						<el-radio :label="1">开启</el-radio>
 						<el-radio :label="2">关闭</el-radio>
 					</el-radio-group>
+					<div class="right_open" v-if="form.award == 1">
+						<p>复购奖比例</p>
+						 <div>
+							 VIP会员：
+							 <input class="ro_ipt" type="text"> <span>%</span>   
+						 </div>
+						 <div>
+							 联创：  
+							 <input class="ro_ipt" type="text"> <span>%</span>    
+						 </div>
+						 <div>
+							 经理：  
+							 <input class="ro_ipt" type="text"> <span>%</span>  
+						 </div>  
+						 <div>
+							 主管：  
+							 <input class="ro_ipt" type="text"> <span>%</span>    
+						 </div>
+						 <div>
+							 分公司：  
+							 <input class="ro_ipt" type="text"> <span>%</span>   
+						 </div> 
+						 <div>
+							 游客：  
+							 <input class="ro_ipt" type="text"> <span>%</span>   
+						 </div>
+					</div>
 				</div>
 				<div class="form_item">
 					<span class="left_txt">购买方式</span>

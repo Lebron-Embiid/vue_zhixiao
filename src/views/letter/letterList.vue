@@ -73,35 +73,16 @@
 				navCurrent: 0,
 				navInners: ['全部信件','收到的信件','发出的信件'],
 				date: '',
-				tableData: [{
-				  id: '1',
-				  theme: '',
-				  vip: '',
-				  type: '',
-				  status: '',
-				  time: ''
-				},{
-				  id: '2',
-				  theme: '',
-				  vip: '',
-				  type: '',
-				  status: '',
-				  time: ''
-				},{
-				  id: '3',
-				  theme: '',
-				  vip: '',
-				  type: '',
-				  status: '',
-				  time: ''
-				},{
-				  id: '4',
-				  theme: '',
-				  vip: '',
-				  type: '',
-				  status: '',
-				  time: ''
-				}]
+				tableData: [
+					// {
+					//   id: '1',
+					//   theme: '',
+					//   vip: '',
+					//   type: '',
+					//   status: '',
+					//   time: ''
+					// },
+				]
 			}
 		},
 		methods:{
